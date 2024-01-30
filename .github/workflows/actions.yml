@@ -26,7 +26,7 @@ jobs:
           
       - name: execute py script # run main.py
         env:
-          SOME_SECRET: $luoy12345
+          SOME_SECRET: $LUOY12345
         # run: python app.py
         run: python hello.py
           
@@ -42,3 +42,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main 
+
+on: workflow_dispatch
