@@ -5,6 +5,7 @@ on:
   schedule:
     # - cron: '0 0 * * 1' # At 00:00 on Monday
     - cron: '*/5 * * * *' # Every 5 minutes
+  workflow_dispatch
 
 jobs:
   build:
@@ -42,5 +43,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main 
-
-on: workflow_dispatch

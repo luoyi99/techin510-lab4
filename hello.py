@@ -1,3 +1,1 @@
-import streamlit as st
-
-st.markdown('Hello world!')
+print ('hello world')
