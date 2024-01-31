@@ -3,24 +3,34 @@ Change this to a world clock app
 """
 
 import time
-
 import streamlit as st
+import datetime
+import zoneinfo
 
-import os
+
+st.title("World Clock")
+
+zone_list = zoneinfo.available_timezones()
+
+selected_zone = st.multiselect(
+    'Which time zones do you want to see?',
+     zone_list,default = ['America/Los_Angeles'])
 
 
-try:
-    SOME_SECRET = os.environ["SOME_SECRET"]
-except KeyError:
-    SOME_SECRET = "Token not available!"
-    # or raise an error if it's not available so that the workflow fails
+for zone in selected_zone:
+    st.markdown("zone: " + zone)
+    time = now.astimezone(zoneinfo.ZoneInfo(zone))
+    st.markdown(time.strftime("%Y-%m-%d %H:%M:%S"))
 
-placeholder = st.empty()
 
-cnt = 0
-while True:
-    with placeholder.container():
-        placeholder.metric("Seconds since you arrived this page", cnt)
-        cnt += 1
+# now.astimezone(zoneinfo.ZoneInfo(zone))
+
+# placeholder = st.empty()
+
+# cnt = 0
+# while True:
+#     with placeholder.container():
+#         placeholder.metric("Seconds since you arrived this page", cnt)
+#         cnt += 1
         
-    time.sleep(1)
+#     time.sleep(1)
