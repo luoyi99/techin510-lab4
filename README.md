@@ -3,7 +3,7 @@ A world clock app that displays time in different locations around the world
 
 ## How to run
 **Method 1:**
-Open [luoyi-techin510-lab4.azurewebsites.net](luoyi-techin510-lab4.azurewebsites.net) in brower
+Open [luoyi-techin510-lab4.azurewebsites.net](https://luoyi-techin510-lab4.azurewebsites.net) in brower
 
 **Method 2:**
 Open the terminal and run the following commands:
